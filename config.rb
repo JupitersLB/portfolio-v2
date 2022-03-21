@@ -40,7 +40,22 @@ page '/*.txt', layout: false
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
 
-# configure :build do
-#   activate :minify_css
-#   activate :minify_javascript
-# end
+configure :development do
+  # set :debug_assets, true
+  config[:css_dir] = ".tmp/dist"
+  config[:js_dir] = ".tmp/dist"
+end
+
+configure :build do
+  activate :minify_css
+  activate :minify_javascript
+end
+
+
+activate :external_pipeline,
+         name: :webpack,
+         command: build? ? 'yarn run build' : 'yarn run start',
+         source: '.tmp/dist',
+         latency: 1
+
+activate :livereload

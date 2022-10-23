@@ -9,7 +9,9 @@
     "start": "webpack --progress --config webpack.config.js --watch --color --devtool source-map  --mode=development",
     "build": "webpack --config ./webpack.config.js --color --bail"
   },
-  "dependencies": {},
+  "dependencies": {
+    "typed.js": "^2.0.12"
+  },
   "devDependencies": {
     "autoprefixer": "^10.4.4",
     "css-loader": "^6.7.1",

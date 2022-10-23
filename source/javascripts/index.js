@@ -1,3 +1,3 @@
 import "../stylesheets/index.scss"
-
-console.log("Hello World");
+// import { typedWelcome } from "./typedWelcome"; // disable in dev
+import { projectTabListner, workTabListener } from './tabs'

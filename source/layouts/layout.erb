@@ -6,9 +6,24 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Liam's Portfolio</title>
-    <%= javascript_include_tag "application" %>
+    <%= javascript_include_tag "application", defer: true %>
   </head>
   <body>
-    <%= yield %>
+    <div class="main">
+      <div class="main-container">
+        <div class="main-container-inner">
+          <div class="svg-container-top">
+            <%= partial "partials/svgTopBorder" %>
+          </div>
+          <%= yield %>
+          <div class="welcome-container">
+            <h1 id="typed-welcome"></h1>
+          </div>
+          <div class="svg-container-bottom">
+            <%= partial "partials/svgBottomBorder" %>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

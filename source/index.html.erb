@@ -1,2 +1,25 @@
-<h1> Hello </h1>
-<%= link_to 'About', '/about.html' %>
+<div id="inner-container" class="inner-container">
+  <%= partial "partials/tabs" %>
+  <div>
+    <h1>This is a header</h1>
+    <p>This is a paragraph</p>
+  </div>
+  <div id="lists">
+    <ul id="work" class="list active">
+      <li>Work item 1</li>
+      <li>Work item 2</li>
+      <li>Work item 3</li>
+      <li>Work item 4</li>
+      <li>Work item 5</li>
+      <li>Work item 7</li>
+    </ul>
+    <ul id="projects" class="list">
+      <li>Projects item 1</li>
+      <li>Projects item 2</li>
+      <li>Projects item 3</li>
+      <li>Projects item 4</li>
+      <li>Projects item 5</li>
+      <li>Projects item 7</li>
+    </ul>
+  </div>
+</div>

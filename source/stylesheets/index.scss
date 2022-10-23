@@ -1,7 +1,164 @@
 body {
-  background-color: red;
+  background-color: #160515;
+  margin: 0;
 }
 
 h1 {
-  color: white;
+  color: #fff;
+}
+p {
+  color: #fff;
+}
+
+h2 {
+  color: #fff
+}
+
+li {
+  color: #fff
+}
+
+.main {
+  box-sizing: border-box;
+  display: block;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow-y: auto;
+}
+
+.main-container {
+  max-width: 100vw;
+  height: 100%;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: flex-start;
+  display: flex;
+}
+
+.main-container .main-container-inner {
+  width: 100vw;
+  max-width: 1280px;
+  box-sizing: border-box;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 8px;
+  position: relative;
+}
+
+.main-container .main-container-inner .inner-container {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.main-container .main-container-inner .welcome-container {
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.main-container .main-container-inner .svg-container-bottom {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  z-index: 10;
+}
+
+.main-container .main-container-inner .svg-container-top {
+  width: 100%;
+  height: 50%;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+}
+
+.list.active {
+  opacity: 1;
+  display: block;
+}
+
+.list {
+  opacity: 0;
+  display: none;
+}
+
+#border-email {
+  stroke: blue,
+}
+
+svg {
+  fill: #fff;
+  stroke: #fff;
+}
+
+svg #border-email:hover {
+  fill: gray;
+  stroke: gray;
+  cursor: pointer;
+}
+
+#typed-welcome {
+  transition: opacity 0.5s ease-in-out;
+  font-size: 108px;
+}
+
+.tabs {
+  display: flex;
+  gap: 8px;
+  position: absolute;
+  top: 30px;
+  right: 80px;
+  z-index: 10;
+}
+
+.tab:hover {
+  cursor: pointer;
+  color: gray;
+}
+
+.tabs .tab.active {
+  text-decoration: underline;
+  color: gray;
+}
+
+
+@media screen and (min-width: 900px) {
+  .main-container {
+    height:100vh;
+    max-height: 100vh;
+    align-items: center;
+    overflow: hidden;
+  }
+  .main-container .main-container-inner {
+    max-height:791px;
+    height: 100vh;
+  } 
+}
+
+@media screen and (min-width: 500px) {
+  .main-container .main-container-inner {
+    padding: 20px;
+  }
+  .main-container .main-container-inner .inner-container {
+    padding: 30px 80px;
+   
+  }
 }

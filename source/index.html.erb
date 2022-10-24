@@ -5,21 +5,7 @@
     <p>This is a paragraph</p>
   </div>
   <div id="lists">
-    <ul id="work" class="list active">
-      <li>Work item 1</li>
-      <li>Work item 2</li>
-      <li>Work item 3</li>
-      <li>Work item 4</li>
-      <li>Work item 5</li>
-      <li>Work item 7</li>
-    </ul>
-    <ul id="projects" class="list">
-      <li>Projects item 1</li>
-      <li>Projects item 2</li>
-      <li>Projects item 3</li>
-      <li>Projects item 4</li>
-      <li>Projects item 5</li>
-      <li>Projects item 7</li>
-    </ul>
+    <%= partial 'partials/list', locals: {data: data.work_list.work, list_id: 'work', active: true }  %>
+    <%= partial 'partials/list', locals: {data: data.project_list.projects, list_id: 'projects', active: false }  %>
   </div>
 </div>

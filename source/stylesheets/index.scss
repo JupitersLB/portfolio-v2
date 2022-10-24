@@ -71,6 +71,7 @@ li {
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: -1;
 }
 
 .main-container .main-container-inner .svg-container-bottom {
@@ -79,13 +80,11 @@ li {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  z-index: 10;
 }
 
 .main-container .main-container-inner .svg-container-top {
   width: 100%;
   height: 50%;
-  z-index: 10;
   display: flex;
   justify-content: space-between;
 }
@@ -100,24 +99,27 @@ li {
   display: none;
 }
 
-#border-email {
-  stroke: blue,
-}
-
 svg {
   fill: #fff;
   stroke: #fff;
+  z-index: 10;
 }
 
-svg #border-email:hover {
+#border-email {
+  fill: #fff;
+  stroke: #fff;
+  cursor: pointer;
+}
+
+#border-email:hover {
   fill: gray;
   stroke: gray;
-  cursor: pointer;
 }
 
 #typed-welcome {
   transition: opacity 0.5s ease-in-out;
   font-size: 108px;
+  z-index: -1;
 }
 
 .tabs {

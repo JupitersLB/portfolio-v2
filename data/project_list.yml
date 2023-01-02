@@ -12,6 +12,7 @@ projects:
     url: https://journal-yours.herokuapp.com
     path: enumedate
     description: An app to help track important dates and novelty around time passed.
+    privacy_policy: This is the privacy policy for EnumeDate
   - id: 2
     name: Yours
     role: Full-stack Developer

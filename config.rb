@@ -53,6 +53,7 @@ end
 
 data.project_list.projects.each do |project|
   proxy "/about/#{project.path}/index.html", "/about/template.html", :locals => { project: project}, ignore: true
+  proxy "/about/#{project.path}/privacy-policy.html", "/about/policy/template.html", :locals => { project: project}, ignore: true
 end
 
 activate :external_pipeline,

@@ -51,6 +51,9 @@ configure :build do
   activate :minify_javascript
 end
 
+data.project_list.projects.each do |project|
+  proxy "/about/#{project.path}/index.html", "/about/template.html", :locals => { project: project}, ignore: true
+end
 
 activate :external_pipeline,
          name: :webpack,

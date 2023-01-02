@@ -1,9 +1,13 @@
 work:
   - id: 1
     name: Odaiba
+    description: Generic Description
   - id: 2
     name: Xenon Partners
+    description: Generic Description
   - id: 3
     name: Le Wagon
+    description: Generic Description
   - id: 4
     name: ListenField
+    description: Generic Description

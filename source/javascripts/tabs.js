@@ -1,3 +1,5 @@
+import { handleDetails } from "./detail"
+
 const projectTab = document.getElementById('projects')
 const workTab = document.getElementById('work')
 const lists = document.getElementById('lists')
@@ -20,6 +22,7 @@ const onTabClick = (event) => {
   }
   event.target.classList.add('active')
   listIds[event.target.id].classList.add('active')
+  handleDetails()
 }
 
 if (tabs) {

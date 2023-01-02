@@ -10,6 +10,7 @@
     "build": "webpack --config ./webpack.config.js --color --bail"
   },
   "dependencies": {
+    "js-yaml-loader": "^1.2.2",
     "typed.js": "^2.0.12"
   },
   "devDependencies": {

@@ -32,35 +32,6 @@ projects:
     image_url: mediSafe
     video_url: https://youtu.be/kAASka6GxIc
   - id: 3
-    name: Mister Cocktail
-    role: Full-stack Developer
-    icons:
-    - faHtml5
-    - faCss3
-    - faJsSquare
-    - faBootstrap
-    pain: Keeping track of cocktails and doses can be difficult. It is also difficult to know which other cocktails you might enjoy!
-    solution: A cool interactive way to record cocktails and doses and will give you suggestions of other cocktails you might like.
-    url: https://jupiters-balltails.herokuapp.com
-    description: A cocktail app primarily exploring the MVC framework built with Ruby on Rails and JavaScript packages. It explores different UI concepts
-    image_url: cocktail
-    video_url: https://www.youtube.com/watch?v=KDDgoUTQ4NI&ab_channel=LiamBaker
-  - id: 4
-    name: Farm-Me
-    role: Back-end Developer
-    icons:
-    - faHtml5
-    - faCss3
-    - faJsSquare
-    - faYarn
-    - faBootstrap
-    pain: Farmers and consumers often interact with 3rd parties during production and consumption which can raise costs and decrease profits. They also might become dependent on and susceptible to changes in global politics.
-    solution: The app allows farmers to post their products in the form of a weekly basket of produce which users can subscribe too. Both parties get to decide whether to enter into the trade or stop at any point based on distances and quality.
-    url: http://farm-me.herokuapp.com
-    description: A great marketplace for farmers to connect with and sell to their local communities. Those who care about sustainabilty and their local economies would love this
-    image_url: farmMe
-    video_url: https://youtu.be/HKybfaIZSOw
-  - id: 5
     name: LT Online
     role: Freelance Developer
     icons:

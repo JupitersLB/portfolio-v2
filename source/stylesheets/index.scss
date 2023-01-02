@@ -141,6 +141,15 @@ svg {
   color: gray;
 }
 
+.list li.active {
+  color: gray;
+}
+
+.list li:hover {
+  cursor: pointer;
+  color: gray;
+}
+
 
 @media screen and (min-width: 900px) {
   .main-container {

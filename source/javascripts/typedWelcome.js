@@ -3,8 +3,6 @@ import Typed from 'typed.js';
 const innerContainer = document.getElementById('inner-container')
 const typedWelcomeEl = document.getElementById('typed-welcome')
 
-console.log('inner container: ', innerContainer)
-
 innerContainer.style.opacity = 0
 
 

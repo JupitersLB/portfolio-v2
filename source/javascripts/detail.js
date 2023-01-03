@@ -1,16 +1,35 @@
 import workData from '../../data/work_list.yml'
 import projectData from '../../data/project_list.yml'
 
-
+const container = document.getElementById('detail')
 
 const addPath = (data) => {
   const button = (
     `<button class="see-more-button">
-      <a href="about/${data.path}">See More</a>
+      <a href="projects/${data.path}">See More</a>
     </button>`
   )
-  const innerHtml = data.path ? button : ""
-  document.getElementById('detail-path').innerHTML = innerHtml
+  if (data.path) {
+    container.insertAdjacentHTML('beforeend', button)
+  }
+}
+
+const addHeader = (data) => {
+  const header = document.createElement('div')
+  header.className = "detail-header"
+  container.insertAdjacentElement('afterbegin', header)
+  header.insertAdjacentHTML('afterbegin', `<h1>${data.name}</h1>`)
+  if (data.title) {
+    header.insertAdjacentHTML('beforeend', `<h1>(${data.title})</h1>`)
+  }
+}
+
+const addDetailHtml = (data) => {
+  addHeader(data)
+  data.path && addPath(data)
+  data.location && container.insertAdjacentHTML('beforeend', `<h3>${data.location}: ${data.start_date} - ${data.end_date}</h3>`)
+  data.description && container.insertAdjacentHTML('beforeend', `<p>${data.description}</p>`)
+  data.responsibilities && container.insertAdjacentHTML('beforeend', `<ul>${data.responsibilities.map((d) => `<li>${d}</li>`)}</ul>`)
 }
 
 export const handleDetails = () => {
@@ -22,7 +41,6 @@ export const handleDetails = () => {
     project: document.getElementById('lists').querySelector('#projects'),
     work: document.getElementById('lists').querySelector('#work')
   }[activeTab]
-
   
   for (const item of activeList.children) {
     if (item.classList.contains('active')) {
@@ -31,7 +49,6 @@ export const handleDetails = () => {
   }
   
   const activeDataItem = activeData.find((d) => d.id.toString() === activeListItem.dataset.id)
-  document.getElementById('detail-header').innerText = activeDataItem.name
-  document.getElementById('detail-description').innerText = activeDataItem.description
-  addPath(activeDataItem)
+  container.innerHTML = ""
+  addDetailHtml(activeDataItem)
 }

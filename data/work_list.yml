@@ -1,13 +1,31 @@
 work:
   - id: 1
-    name: Odaiba
-    description: Generic Description
+    name: ListenField
+    title: Full Stack Developer
+    start_date: April 2021
+    end_date: Ongoing
+    location: Tokyo
+    responsibilities: [Total rebuild of previous application into React Native with I18n support., Set up and manage GCP and a whole range of Firebase integrations.]
+    description: ListenField provides a variety of products focusing on solutions to precision farming and other sectors within the agritech industry. My main focuses were the mobile app for farm and field management, and the web dashboard for visualizing data collected from multiple sources. This included working on multiple map-based products.
   - id: 2
     name: Xenon Partners
+    title: Software Engineer
+    start_date: January 2021
+    end_date: March 2021
+    location: Tokyo
     description: Generic Description
   - id: 3
     name: Le Wagon
+    title: Teaching Assistant
+    start_date: August 2020
+    end_date: Ongoing
+    location: Tokyo
     description: Generic Description
   - id: 4
-    name: ListenField
+    name: Odaiba
+    title: Full Stack Developer (volunteer)
+    start_date: August 2020
+    end_date: January 2021
+    location: Tokyo
     description: Generic Description
+   

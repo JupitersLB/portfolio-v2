@@ -1,4 +1,4 @@
-<ul id=<%= locals[:list_id] %> class="list <%= locals[:active] ? 'active' : '' %>">
+<ul id="work-list">
   <% locals[:data].each do |project| %>
     <li data-id="<%= project.id %>" class="<%= project.id == 1 ? 'active' : '' %>"><%= project.name %></li>
   <% end %>

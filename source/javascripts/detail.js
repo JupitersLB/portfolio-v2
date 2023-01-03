@@ -1,15 +1,9 @@
 import workData from '../../data/work_list.yml'
 import projectData from '../../data/project_list.yml'
 
-const detailContainer = document.getElementById('detail')
+const workContainer = document.getElementById('work-details')
+const projectContainer = document.getElementById('project-details')
 let container
-
-const addLink = (data) => {
-  const link = document.createElement('a')
-  link.href = `projects/${data.path}`
-  link.className = "project-card-link"
-  container.insertAdjacentElement('afterbegin', link)
-}
 
 const addHeader = (data) => {
   const header = document.createElement('div')
@@ -27,50 +21,74 @@ const addResponsibilities = (data) => {
   data.responsibilities.forEach((r) => ul.insertAdjacentHTML('beforeend', `<li>${r}</li>`))
 }
 
+const addWorkHtml = (data) => {
+  addHeader(data)
+  container.insertAdjacentHTML('beforeend', `<h3>${data.location}: ${data.start_date} - ${data.end_date}</h3>`)
+  container.insertAdjacentHTML('beforeend', `<p>${data.description}</p>`)
+  addResponsibilities(data)
+}
+
+const handleWorkContainer = (dataList) => {
+  if (workContainer.querySelector('.work-details-container')) {
+    workContainer.removeChild(workContainer.querySelector('.work-details-container'))
+  }
+  const workDetails = document.createElement('div')
+  workDetails.className = "work-details-container"
+  container.insertAdjacentElement('afterbegin', workDetails)
+  container = workDetails
+  let activeListItem
+  for (const item of document.getElementById('work-list').children) {
+    if (item.classList.contains('active')) {
+      activeListItem = item
+    }
+  }
+  const data = dataList.find((d) => d.id.toString() === activeListItem.dataset.id)
+  addWorkHtml(data)
+}
+
+const addProjectHtml = (card, data) => {
+  const header = document.createElement('div')
+  header.className = "detail-header"
+  card.insertAdjacentElement('afterbegin', header)
+  header.insertAdjacentHTML('afterbegin', `<h1>${data.name}</h1>`)
+  const link = document.createElement('a')
+  link.href = `projects/${data.path}`
+  link.className = "project-card-link"
+  card.insertAdjacentElement('afterbegin', link)
+  card.insertAdjacentHTML('beforeend', `<p>${data.description}</p>`)
+}
+
+const createCard = (data) => {
+  const card = document.createElement('div')
+  card.className = 'project-card'
+  addProjectHtml(card, data)
+  return card
+}
+
+const handleProjectContainer = (dataList) => {
+  container.innerHTML = ""
+  const cards = dataList.map(createCard)
+  cards.forEach((c) => container.insertAdjacentElement('beforeend', c))
+}
+
+export const handleDetails = () => {
+  const projectTab = document.getElementById('projects')
+  const activeTab = projectTab.classList.contains('active') ? 'project' : 'work'
+  let activeData
+  if (activeTab === 'project') {
+    container = projectContainer
+    activeData = projectData.projects
+    handleProjectContainer(activeData)
+  } else {
+    container = workContainer
+    activeData = workData.work
+    handleWorkContainer(activeData)
+  }
+}
+
 // const addImage = (data) => {
 //   const image = document.createElement('img')
 //   image.src = data.cloudinary_url
 //   image.className = "project-card-image"
 //   container.insertAdjacentElement('beforeend', image)
 // }
-
-const addDetailHtml = (data) => {
-  addHeader(data)
-  data.location && container.insertAdjacentHTML('beforeend', `<h3>${data.location}: ${data.start_date} - ${data.end_date}</h3>`)
-  data.path && addLink(data)
-  data.description && container.insertAdjacentHTML('beforeend', `<p>${data.description}</p>`)
-  // data.cloudinary_url && addImage(data)
-  data.responsibilities && addResponsibilities(data)
-}
-
-const handleContainer = (activeTab) => {
-  if (activeTab === 'project') {
-    const card = document.createElement('div')
-    card.className = 'project-card'
-    container.insertAdjacentElement('afterbegin', card)
-    container = card
-  }
-}
-
-export const handleDetails = () => {
-  container = detailContainer
-  const projectTab = document.getElementById('projects')
-  const activeTab = projectTab.classList.contains('active') ? 'project' : 'work'
-  const activeData = activeTab === 'project' ? projectData.projects : workData.work
-  let activeListItem
-  const activeList = {
-    project: document.getElementById('lists').querySelector('#projects'),
-    work: document.getElementById('lists').querySelector('#work')
-  }[activeTab]
-  
-  for (const item of activeList.children) {
-    if (item.classList.contains('active')) {
-      activeListItem = item
-    }
-  }
-  
-  const activeDataItem = activeData.find((d) => d.id.toString() === activeListItem.dataset.id)
-  container.innerHTML = ""
-  handleContainer(activeTab)
-  addDetailHtml(activeDataItem)
-}

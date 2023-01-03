@@ -1,9 +1,11 @@
 <div id="inner-container" class="inner-container">
   <%= partial "partials/tabs" %>
-  <div class="detail-container" id="detail">
+  <div class="work-container" id="work-details">
+    <div class="work-list-container">
+      <%= partial 'partials/list', locals: {data: data.work_list.work, list_id: 'work', active: true }  %>
+    </div>
   </div>
-  <div id="lists">
-    <%= partial 'partials/list', locals: {data: data.work_list.work, list_id: 'work', active: true }  %>
-    <%= partial 'partials/list', locals: {data: data.project_list.projects, list_id: 'projects', active: false }  %>
+  <div class="projects-container hidden" id="project-details">
   </div>
+  
 </div>

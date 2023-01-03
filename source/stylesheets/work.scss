@@ -1,0 +1,29 @@
+.work-details-container {
+  height: 100%;
+  width: 80%;
+  z-index: 100;
+}
+
+.work-list-container {
+  width: 20%;
+  margin: auto;
+}
+
+.work-container {
+  display: flex;
+  width: 100%;
+}
+
+#work-list {
+  margin: auto;
+  max-width: max-content;
+}
+
+#work-list li.active {
+  color: gray;
+}
+
+#work-list li:hover {
+  cursor: pointer;
+  color: gray;
+}

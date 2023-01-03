@@ -24,6 +24,7 @@ projects:
     - faBootstrap
     - faYarn
     url: https://journal-yours.herokuapp.com
+    cloudinary_url: https://res.cloudinary.com/dkb5ejonu/image/upload/v1672735496/Portfolio/yours_ztcg7v.jpg
     path: yours
     description: An onboarding social media app educating students in schools for 21st Century education. It allows schools and educational institutions to bring their students into an increasingly digital world
   - id: 3
@@ -37,5 +38,6 @@ projects:
     - faFigma 
     - faYarn
     url: https://www.medi-safe.me
+    cloudinary_url: https://res.cloudinary.com/dkb5ejonu/image/upload/v1672735484/Portfolio/medi-safe_mspawv.jpg
     path: medi-safe
     description: An app which helps solve task management and communication issues within hospitals by supporting nursing staff to track their progress and stay up-to-date

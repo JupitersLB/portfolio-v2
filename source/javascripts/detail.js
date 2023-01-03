@@ -1,17 +1,14 @@
 import workData from '../../data/work_list.yml'
 import projectData from '../../data/project_list.yml'
 
-const container = document.getElementById('detail')
+const detailContainer = document.getElementById('detail')
+let container
 
-const addPath = (data) => {
-  const button = (
-    `<button class="see-more-button">
-      <a href="projects/${data.path}">See More</a>
-    </button>`
-  )
-  if (data.path) {
-    container.insertAdjacentHTML('beforeend', button)
-  }
+const addLink = (data) => {
+  const link = document.createElement('a')
+  link.href = `projects/${data.path}`
+  link.className = "project-card-link"
+  container.insertAdjacentElement('afterbegin', link)
 }
 
 const addHeader = (data) => {
@@ -24,15 +21,39 @@ const addHeader = (data) => {
   }
 }
 
+const addResponsibilities = (data) => {
+  const ul = document.createElement('ul')
+  container.insertAdjacentElement('beforeend', ul)
+  data.responsibilities.forEach((r) => ul.insertAdjacentHTML('beforeend', `<li>${r}</li>`))
+}
+
+// const addImage = (data) => {
+//   const image = document.createElement('img')
+//   image.src = data.cloudinary_url
+//   image.className = "project-card-image"
+//   container.insertAdjacentElement('beforeend', image)
+// }
+
 const addDetailHtml = (data) => {
   addHeader(data)
-  data.path && addPath(data)
   data.location && container.insertAdjacentHTML('beforeend', `<h3>${data.location}: ${data.start_date} - ${data.end_date}</h3>`)
+  data.path && addLink(data)
   data.description && container.insertAdjacentHTML('beforeend', `<p>${data.description}</p>`)
-  data.responsibilities && container.insertAdjacentHTML('beforeend', `<ul>${data.responsibilities.map((d) => `<li>${d}</li>`)}</ul>`)
+  // data.cloudinary_url && addImage(data)
+  data.responsibilities && addResponsibilities(data)
+}
+
+const handleContainer = (activeTab) => {
+  if (activeTab === 'project') {
+    const card = document.createElement('div')
+    card.className = 'project-card'
+    container.insertAdjacentElement('afterbegin', card)
+    container = card
+  }
 }
 
 export const handleDetails = () => {
+  container = detailContainer
   const projectTab = document.getElementById('projects')
   const activeTab = projectTab.classList.contains('active') ? 'project' : 'work'
   const activeData = activeTab === 'project' ? projectData.projects : workData.work
@@ -50,5 +71,6 @@ export const handleDetails = () => {
   
   const activeDataItem = activeData.find((d) => d.id.toString() === activeListItem.dataset.id)
   container.innerHTML = ""
+  handleContainer(activeTab)
   addDetailHtml(activeDataItem)
 }

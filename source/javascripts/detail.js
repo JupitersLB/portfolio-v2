@@ -67,8 +67,11 @@ const createCard = (data) => {
 
 const handleProjectContainer = (dataList) => {
   container.innerHTML = ""
+  const cardContainer = document.createElement('div')
+  cardContainer.className = "cards"
+  container.insertAdjacentElement('beforeend', cardContainer)
   const cards = dataList.map(createCard)
-  cards.forEach((c) => container.insertAdjacentElement('beforeend', c))
+  cards.forEach((c) => cardContainer.insertAdjacentElement('beforeend', c))
 }
 
 export const handleDetails = () => {

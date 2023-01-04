@@ -1,5 +1,6 @@
 @import 'work.scss';
 @import 'projects.scss';
+@import 'tabs.scss';
 
 body {
   background-color: #160515;
@@ -19,15 +20,20 @@ p {
 }
 
 h2 {
-  color: #fff
+  color: #fff;
 }
 
 li {
-  color: #fff
+  color: #fff;
 }
 
 a {
   text-decoration: none;
+}
+
+i {
+  color: #fff;
+  font-size: x-large;
 }
 
 .main {
@@ -71,18 +77,6 @@ a {
   left: 0;
   right: 0;
   transition: opacity 0.5s ease-in-out;
-}
-
-.main-container .main-container-inner .project-container {
-  padding: 32px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
 }
 
 .main-container .main-container-inner .welcome-container {
@@ -136,25 +130,6 @@ svg {
   z-index: -1;
 }
 
-.tabs {
-  display: flex;
-  gap: 8px;
-  position: absolute;
-  top: 30px;
-  right: 80px;
-  z-index: 10;
-}
-
-.tab:hover {
-  cursor: pointer;
-  color: gray;
-}
-
-.tabs .tab.active {
-  text-decoration: underline;
-  color: gray;
-}
-
 .detail-header {
   display: flex;
   gap: 8px;
@@ -162,6 +137,12 @@ svg {
 
 .hidden {
   display: none !important;
+}
+
+.divider-v {
+  border-right: 1px solid gray;
+  height: 24px;
+  margin: auto 4px;
 }
 
 

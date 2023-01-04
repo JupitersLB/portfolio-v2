@@ -4,13 +4,13 @@ const projectTab = document.getElementById('projects')
 const workTab = document.getElementById('work')
 const workContainer = document.getElementById('work-details')
 const projectContainer = document.getElementById('project-details')
-const tabs = document.querySelector('.tabs').children
+const tabs = document.querySelector('.tabs')
 
 export let projectTabListner;
 export let workTabListener;
 
 const onTabClick = (event) => {
-  for (const tab of tabs) {
+  for (const tab of tabs.children) {
     tab.classList.remove('active')
   }
   event.target.classList.add('active')

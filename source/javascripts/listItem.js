@@ -10,6 +10,9 @@ const onClick = (event) => {
   handleDetails()
 }
 
-for (const item of list.children) {
-  item.addEventListener('click', onClick)
+if (list) {
+  for (const item of list.children) {
+    item.addEventListener('click', onClick)
+  }
 }
+

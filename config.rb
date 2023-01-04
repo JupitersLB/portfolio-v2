@@ -51,8 +51,12 @@ configure :build do
   activate :minify_javascript
 end
 
-data.project_list.projects.each do |project|
-  proxy "/projects/#{project.path}/index.html", "/projects/template.html", :locals => { project: project}, ignore: true
+projects = data.project_list.projects
+
+p projects
+
+projects.each do |project|
+  proxy "/projects/#{project.path}/index.html", "/projects/template.html", :locals => { project: project }, ignore: true
   proxy "/projects/#{project.path}/privacy-policy.html", "/projects/policy/template.html", :locals => { project: project}, ignore: true
 end
 

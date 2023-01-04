@@ -1,0 +1,35 @@
+.tabs {
+  display: flex;
+  gap: 8px;
+  position: absolute;
+  top: 30px;
+  right: 80px;
+  z-index: 10;
+}
+
+.tab:hover {
+  cursor: pointer;
+  color: gray;
+}
+
+.tabs .tab.active {
+  text-decoration: underline;
+  color: gray;
+}
+
+.project-tab {
+  position: relative;
+  margin: auto;
+}
+
+.project-tab:hover p {
+  color: grey;
+}
+
+.project-tab.home i {
+  font-size: large;
+}
+
+.project-tab.home:hover i {
+  color: gray;
+}

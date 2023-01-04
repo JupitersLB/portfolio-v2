@@ -76,6 +76,8 @@ const handleProjectContainer = (dataList) => {
 
 export const handleDetails = () => {
   const projectTab = document.getElementById('projects')
+  if (!projectTab) return
+  
   const activeTab = projectTab.classList.contains('active') ? 'project' : 'work'
   let activeData
   if (activeTab === 'project') {
@@ -88,10 +90,3 @@ export const handleDetails = () => {
     handleWorkContainer(activeData)
   }
 }
-
-// const addImage = (data) => {
-//   const image = document.createElement('img')
-//   image.src = data.cloudinary_url
-//   image.className = "project-card-image"
-//   container.insertAdjacentElement('beforeend', image)
-// }

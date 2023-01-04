@@ -3,13 +3,11 @@ projects:
     name: EnumeDate
     role: Full-stack Developer
     icons: 
-    - faHtml5
-    - faCss3
-    - faReact
-    - faJsSquare
-    - faBootstrap
-    - faYarn
-    url: https://journal-yours.herokuapp.com
+      - fa-app-store-ios
+      - fa-android
+      - fa-react
+      - fa-github
+      - fa-google
     path: enumedate
     description: An app to help track important dates and novelty around time passed.
     privacy_policy: This is the privacy policy for EnumeDate
@@ -17,13 +15,12 @@ projects:
     name: Yours
     role: Full-stack Developer
     icons: 
-    - faHtml5
-    - faCss3
-    - faReact
-    - faJsSquare
-    - faBootstrap
-    - faYarn
-    url: https://journal-yours.herokuapp.com
+      - fa-html5
+      - fa-css3-alt
+      - fa-react
+      - fa-js-square
+      - fa-bootstrap
+      - fa-yarn
     cloudinary_url: https://res.cloudinary.com/dkb5ejonu/image/upload/v1672735496/Portfolio/yours_ztcg7v.jpg
     path: yours
     description: An onboarding social media app educating students in schools for 21st Century education. It allows schools and educational institutions to bring their students into an increasingly digital world
@@ -31,13 +28,12 @@ projects:
     name: Medi+Safe
     role: Front-end Developer
     icons: 
-    - faHtml5
-    - faCss3
-    - faJsSquare
-    - faBootstrap
-    - faFigma 
-    - faYarn
-    url: https://www.medi-safe.me
+      - fa-html5
+      - fa-css3-alt
+      - fa-js-square
+      - fa-bootstrap
+      - fa-figma 
+      - fa-yarn
     cloudinary_url: https://res.cloudinary.com/dkb5ejonu/image/upload/v1672735484/Portfolio/medi-safe_mspawv.jpg
     path: medi-safe
     description: An app which helps solve task management and communication issues within hospitals by supporting nursing staff to track their progress and stay up-to-date

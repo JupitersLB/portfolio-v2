@@ -13,10 +13,15 @@
       </div>
     <% end %>
   </div>
-  <h1><%= project.name %></h1>
+  <% link_to project.github, class: "project-header", target: "blank" do %>
+    <h1><%= project.name %></h1>
+    <i class="fa-brands fa-github"></i>
+  <% end %>
   <div class="project-details-container">
     <div class="project-details">
-      <p><%= project.description %></p>
+      <p><%= project.description_long %></p>
+      <p><%= project.pain %></p>
+      <p><%= project.solution %></p>
     </div>
     <div class="project-aeas">
       <img class="project-image" src=<%= project.cloudinary_url %> />

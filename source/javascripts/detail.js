@@ -25,6 +25,7 @@ const addWorkHtml = (data) => {
   addHeader(data)
   container.insertAdjacentHTML('beforeend', `<h3>${data.location}: ${data.start_date} - ${data.end_date}</h3>`)
   container.insertAdjacentHTML('beforeend', `<p>${data.description}</p>`)
+  container.insertAdjacentHTML('beforeend', `<p>Tech: ${data.stack}</p>`)
   addResponsibilities(data)
 }
 
@@ -51,11 +52,12 @@ const addProjectHtml = (card, data) => {
   header.className = "detail-header"
   card.insertAdjacentElement('afterbegin', header)
   header.insertAdjacentHTML('afterbegin', `<h1>${data.name}</h1>`)
+  header.insertAdjacentHTML('beforeend', `<i class="fa ${data.platform === "web" ? "fa-laptop" : "fa-mobile"}"></i>`)
   const link = document.createElement('a')
   link.href = `projects/${data.path}`
   link.className = "project-card-link"
   card.insertAdjacentElement('afterbegin', link)
-  card.insertAdjacentHTML('beforeend', `<p>${data.description}</p>`)
+  card.insertAdjacentHTML('beforeend', `<p>${data.description_short}</p>`)
 }
 
 const createCard = (data) => {

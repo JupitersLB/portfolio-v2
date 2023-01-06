@@ -6,11 +6,15 @@ projects:
       - fa-app-store-ios
       - fa-android
       - fa-react
-      - fa-github
       - fa-google
+    cloudinary_url: https://res.cloudinary.com/dkb5ejonu/image/upload/v1672907993/Portfolio/enumedate.png
     path: enumedate
-    description: An app to help track important dates and novelty around time passed.
-    privacy_policy: This is the privacy policy for EnumeDate
+    description_short: An app to help track important dates and novelty around time passed.
+    description_long: More of a self-discovery and learning step into the mobile app making world. Starting with a simple idea, and hopefully progressing into an app which can enable multiple different featuers such as notification and in app purchases.
+    pain: Bureaucratic processes, by nature, are often slow and with large wait periods. Often, I find that waiting periods are often in the frame of weeks or months. Just general life events come and go, and for some, require more effort than its worth to calculate the time passed since onset.
+    solution: Add important life events or track periods of time to give ease of mind while trying to organize. Add comic relief by converting waiting periods to different units of time. Receive notifications for when milestones or expected waiting periods have been reached. 
+    platform: mobile
+    github: https://github.com/JupitersLB/EnumeDate
   - id: 2
     name: Yours
     role: Full-stack Developer
@@ -23,7 +27,12 @@ projects:
       - fa-yarn
     cloudinary_url: https://res.cloudinary.com/dkb5ejonu/image/upload/v1672735496/Portfolio/yours_ztcg7v.jpg
     path: yours
-    description: An onboarding social media app educating students in schools for 21st Century education. It allows schools and educational institutions to bring their students into an increasingly digital world
+    description_short: A social media app educating students in schools for 21st Century education.
+    description_long: An onboarding social media app educating students in schools for 21st Century education. It allows schools and educational institutions to bring their students into an increasingly digital world.
+    pain: With kids becoming digitally native at a much younger age, learning how to navigate and interact with social media is increasingly more important. Bullying, fake news, and scams have massively negative consequences to kids who struggle to deal with a 24/7 form of constant feedback and interaction with society.
+    solution: This app is a social media that will only be accessible to students of the same school. By creating a social media intranet, students will interact with classmates and peers in a safe space, and be introduced on a much smaller scale to how social media work and the issues which are associated with it. Their blogs, comments, and profiles are only accessible to mutal friends. They\'ll also have the opportunity for direct messaging and communicating with friends privately.
+    platform: web
+    github: https://github.com/JupitersLB/rails-journal
   - id: 3
     name: Medi+Safe
     role: Front-end Developer
@@ -36,4 +45,9 @@ projects:
       - fa-yarn
     cloudinary_url: https://res.cloudinary.com/dkb5ejonu/image/upload/v1672735484/Portfolio/medi-safe_mspawv.jpg
     path: medi-safe
-    description: An app which helps solve task management and communication issues within hospitals by supporting nursing staff to track their progress and stay up-to-date
+    description_short: An app which helps solve task management and communication issues within hospitals.
+    description_long: A kanban style app which helps solve task management and communication issues within hospitals by supporting nursing staff to track their progress and stay up-to-date.
+    pain: As a group project, a member explained the issues that can occur by poor communication or issues in organizing tasks. Lead nurses have to ensure nurse workloads correspond to abilities while serving patients' needs. They also follow up on nurses' progress and help or rearrange as necessary. Member nurses figurw out their own schedules with patients and collate information from several different sources. They also need to be aware of their own progress and of any updates.
+    solution: First step was to automate patient assignments based on important criteria. After patients were assigned, the lead nurse could easily track their team's progress. The member nurses get a quick overview of their day including, the number of tasks, their patients' severity levels, and a list of their patients. Extra information could be provided to them for each patient. A kanban style system allowed customization of schedules. A notification system enabled updates and to request assistance.
+    platform: web
+    github: https://github.com/JupitersLB/medi-safe

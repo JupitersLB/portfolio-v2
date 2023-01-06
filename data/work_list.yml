@@ -5,7 +5,8 @@ work:
     start_date: April 2021
     end_date: Ongoing
     location: Tokyo
-    responsibilities: [Total rebuild of previous application into React Native with I18n support., Set up and manage GCP and a whole range of Firebase integrations., Set up and manage the iOS and Play store in regards to the development and rollout of new versions including the correct certificates, identifiers, and profiles for Apple Sign in and push notifications., Build CI/CD using Bitrise to create a smooth pipeline of development, Work in both native languages and TypeScript., Create complex maps integrations to enable users to build complex polygons for analytics purposes providing geospatial data and other information., Work on d3 based libraries to build animated graphs providing visual feedback to organizations on their data., Work in TypeScript using React library to build reusable components with a Next.js React framework., Collaborate with others on GitLab issues/epics and Figma to provide feedback to enable asynchronously and develop better UI/UX., Create CI/CD pipelines on GitLab for simple testing and deployments., elp structure API architecture for optimization on mobile and web products., Use Mapbox to display multiple VI layers to judge crop health.]
+    stack: React Native, TypeScript, NextJS, React, Tailwindcss, Ruby on Rails, GCP, Firebase, GEE, Docker, Gitlab CI 
+    responsibilities: ["Build mobile app from with I18n support.", "Set up and manage GCP and Firebase integrations.", "Set up and manage the iOS and Play store.", "Build CI/CD for Android and iOS.", "Update Docker and CI/CD for web product.", "Build complex map interactions enabling users to save farm, field, and crop related data.", "Use d3 based libraries to build animated graphs.", "Collaborate on GitLab issues/epics and Figma to enable asynchronous work and develop better UI/UX.", "Help structure API architecture for optimization on mobile and web products.", "Mentor and onboard junior developers."]
     description: ListenField provides a variety of products focusing on solutions to precision farming and other sectors within the agritech industry. My main focuses were the mobile app for farm and field management, and the web dashboard for visualizing data collected from multiple sources. This included working on multiple map-based products.
   - id: 2
     name: Xenon
@@ -13,7 +14,8 @@ work:
     start_date: January 2021
     end_date: March 2021
     location: Tokyo
-    responsibilities: ["Build React components for UXPin customers.", "Update React pure components to functional components.", "Update Stripe API to the latest version.", "Bug check and code reviews."]
+    stack: React, Ruby on Rails, JavaScript, Docker 
+    responsibilities: ["Build React PropTypes.", "Build generic multifunctional components.", "Update React pure components to functional components.", "Update Stripe API to the latest version.", "Bug check and code reviews."]
     description: Xenon Parters acquires struggling start-ups in an attempt to make them profitable. I worked on multiple separated tasks across their portfolio.
   - id: 3
     name: Le Wagon
@@ -21,7 +23,8 @@ work:
     start_date: August 2020
     end_date: Ongoing
     location: Tokyo
-    responsibilities: ["Assist students in learning Ruby, Ruby on Rails, and JavaScript.", "Assist students in developing projects.", "Give feedback to students pitches based on UI/UX and overall ideas."]
+    stack: Ruby on Rails, JavaScript, CSS, HTML, Bootstrap
+    responsibilities: ["Assist students in learning Ruby, Ruby on Rails, and JavaScript.", "Assist students in developing projects.", "Give feedback to students pitches based on UI/UX and overall ideas.", "Lead daily scrum meetings and other AGILE philosophy."]
     description: Le Wagon is a global coding bootcamp. After graduating, I was selected to continue during project weeks to help new students develop their skills and products.
   - id: 4
     name: Odaiba
@@ -29,6 +32,7 @@ work:
     start_date: August 2020
     end_date: January 2021
     location: Tokyo
+    stack: React, Ruby on Rails, JavaScript 
     responsibilities: ["Research, design, and implement scalable features server-side with RoR and on the front-end with React.", "Build a multi-time zone schedule for pair-programming.", "Make APIs more efficient, reducing load times by 50%.", "Complete migrations with RoR and ActiveRecord.", "Run, build, and fix tests with RSpec."]
     description: Odaiba was a start-up conceptualized during a hackathon. After graduating Le Wagon bootcamp, I volunteered my time to gain experience in a development environment. My main focus was bridging the gap between Rails and React.
    

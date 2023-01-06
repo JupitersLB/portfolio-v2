@@ -20,8 +20,10 @@
 }
 
 .project-image {
-  width: 100%;
+  width: auto;
+  max-width: 100%;
   border-radius: 16px;
+  max-height: 320px;
 }
 
 .project-details-container {
@@ -42,14 +44,20 @@
   display: flex;
   justify-content: space-evenly;
   padding: 8px 16px;
+  width: 100%;
 }
 
 .project-details {
   width: 100%;
+  margin: auto;
 }
 
 .project-aeas {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .cards {
@@ -64,6 +72,22 @@
   height: 85%;
   overflow: scroll;
   padding: 0px 24px;
+}
+
+.project-header {
+  display: flex;
+  gap: 16px;
+  align-items: baseline;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.project-header:hover h1 {
+  color: gray;
+}
+
+.project-header:hover i {
+  color: gray;
 }
 
 .project-card {
